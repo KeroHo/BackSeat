@@ -99,7 +99,7 @@ class Dashboard extends React.Component {
         <h2>Car Information:</h2>
         <p>
           Make: {cmake} | Model: {cmodel} | Year: {cyear} <br />
-          vin:{this.props.vin} | Mileage: {cmileage}
+          vin:16BHS1659432 | Mileage: {cmileage}
         </p>
         <br />
 
@@ -228,7 +228,7 @@ function App(props) {
   return (
     <BrowserRouter>
       <div>
-        <Route exact path path="/" render={() => <Redirect to="/login" />} />
+        <Route exact path="/" render={() => <Redirect to="/login" />} />
         <Route path="/login" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
       </div>

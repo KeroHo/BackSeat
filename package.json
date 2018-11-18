@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://KeroHo.github.io/BackSeat",
   "dependencies": {
     "@capacitor/cli": "^1.0.0-beta.8",
     "@capacitor/core": "^1.0.0-beta.8",
