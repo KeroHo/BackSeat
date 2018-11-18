@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Redirect } from "react-router-dom";
 // import { Plugins } from "@capacitor/core";
 // const { Geolocation } = Plugins;
 import ReactTable from "react-table";
@@ -10,7 +10,7 @@ import "react-table/react-table.css";
 import { makeData, Logo, Tips } from "./Utils";
 var moment = require("moment");
 var mysql = require("mysql");
-var express = require("express");
+//var express = require("express");
 
 //Loging to MySQL server.
 // var con = mysql.createConnection({
@@ -53,7 +53,12 @@ class Login extends Component {
           <form onSubmit={this.handleSubmit}>
             <label>
               Enter your VIN:
-              <input type="text" id="username" placeholder="VIN" />
+              <input
+                type="text"
+                id="vin"
+                value={this.props.vin}
+                placeholder="VIN"
+              />
             </label>
 
             <br />
@@ -94,7 +99,7 @@ class Dashboard extends React.Component {
         <h2>Car Information:</h2>
         <p>
           Make: {cmake} | Model: {cmodel} | Year: {cyear} <br />
-          vin:1GHBA3216511 | Mileage: {cmileage}
+          vin:{this.props.vin} | Mileage: {cmileage}
         </p>
         <br />
 
@@ -223,6 +228,7 @@ function App(props) {
   return (
     <BrowserRouter>
       <div>
+        <Route exact path path="/" render={() => <Redirect to="/login" />} />
         <Route path="/login" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
       </div>
