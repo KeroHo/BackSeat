@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "C:\\Users\\THIENNHON\\Documents\\SacHack_Frigate"
+	},
+	{
+		"path": ".",
+		"name": "my-app"
+	}
+],
+  "settings": {
+    "editor.formatOnSave": true
+  }
+}

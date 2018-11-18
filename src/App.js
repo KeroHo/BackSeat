@@ -9,6 +9,23 @@ import ReactTable from "react-table";
 import "react-table/react-table.css";
 import { makeData, Logo, Tips } from "./Utils";
 var moment = require("moment");
+var mysql = require("mysql");
+var express = require("express");
+
+//Loging to MySQL server.
+// var con = mysql.createConnection({
+//   host: "104.248.66.43",
+//   user: "kevin",
+//   password: "Kevin1234@",
+//   database: "frigate"
+// });
+
+// con.connect(function(err) {
+//   if (err) {
+//     throw err;
+//   }
+//   console.log("Connected");
+// });
 
 class Login extends Component {
   constructor(props) {

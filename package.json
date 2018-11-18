@@ -5,7 +5,9 @@
   "dependencies": {
     "@capacitor/cli": "^1.0.0-beta.8",
     "@capacitor/core": "^1.0.0-beta.8",
+    "express": "^4.16.4",
     "moment": "^2.22.2",
+    "mysql": "^2.16.0",
     "namor": "^1.1.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
